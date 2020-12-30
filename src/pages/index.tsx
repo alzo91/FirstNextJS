@@ -1,6 +1,7 @@
 import { GetServerSideProps } from 'next'
 import Link from 'next/link'
 import SEO from '@/components/seo';
+import Menu from '@/components/menu';
 import {Title,Container} from '../../styles/pages/Home'
 
 interface IProduct {
@@ -30,18 +31,24 @@ export default function Home({recommendedProducts}:HomeProps) {
     <>
       <SEO 
        title='Your best Ecommerce'
+       description="Wellcome to your best Ecommerce.!"
        shouldExcludeTitleSuffix={true}
-       image='clean-energy.png'/>
+       image='clean-energy.png'
+       shouldIndexPage/>
+       <Menu />
       <Container>
-        <Title>Curso de NextJS</Title>
+        
+        <Title>Produtos Recomendados</Title>
         <ul>
           {recommendedProducts.map( item => 
-            (<li key={String(item.id)} onClick={()=>{}}>
-              <Link href={`catalog/products/${item.slug}`}>
+            (<li 
+              key={String(item.id)} 
+              className="box-border">
+              <Link href={`/catalog/products/${item.slug}`}>
                 <a>{item.title}</a>
               </Link>
               
-              <Link href={`catalog/categories/${item.category_id}`}>
+              <Link href={`/catalog/categories/${item.category_id}`}>
                 <a>Categoria: {item.category_id}</a>
               </Link>
               </li>

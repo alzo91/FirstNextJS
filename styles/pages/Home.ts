@@ -9,4 +9,30 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  ul{
+    background-color: #2F2F30;
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2px;
+    li{
+      margin: 7px 7px 7px 7px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      background-color: #222229;
+      border-radius: 25px;
+      box-shadow: 5px 5px 3px #008080;
+      a{
+        text-decoration: none;
+        color: #fff;
+        padding: 3px;
+        height: 48px;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
 `

@@ -1,6 +1,5 @@
 
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { route } from 'next/dist/next-server/server/router';
 import {useRouter} from 'next/router'
 
 interface IProduct {

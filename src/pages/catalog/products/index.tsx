@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next";
-
+import SEO from '@/components/seo'
+import Menu from '@/components/menu';
 interface IProduct {
   id: String;
   title: String;
@@ -16,8 +17,14 @@ interface IProducts {
 export default function Products({ products }: IProducts) {
   return (
     <>
+      <SEO 
+      title="Produtos" 
+      shouldExcludeTitleSuffix={false} 
+      shouldIndexPage={true} 
+      description="Pagina de Produtos" />
+      <Menu />
       <div>
-        <h1>Categorias</h1>
+        <h1>Produtos...</h1>
       </div>
       <ul>
         {products.map((product) => (

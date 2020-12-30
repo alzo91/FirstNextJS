@@ -1,6 +1,8 @@
 import { GetStaticProps } from "next"
-
-
+import SEO from '@/components/seo'
+import Menu from '@/components/menu';
+import Link from "next/link";
+import Table from 'react-bootstrap/Table'
 interface ICategory {
   id: String,
   title:String,
@@ -13,14 +15,36 @@ interface ICategories{
 export default function Categories({categories}:ICategories){
     return (
       <>
+        <SEO 
+          title="Categorias" 
+          shouldExcludeTitleSuffix={false} 
+          shouldIndexPage={true} 
+          description="Pagina de Produtos" />
+      <Menu />
       <div>
-        <h1>Categorias</h1>
+        <h1>Categorias...</h1>
       </div>
-      <ul>
+      <Table striped bordered hover variant="dark">
+        <thead>
+          <tr>
+            <td>Categoria</td>
+            <td>Detalhes</td>
+          </tr>
+        </thead>
+        <tbody>
         {
-          categories.map(category => <li key={String(category.id)}><p>{category.title}</p></li>)
-        }
-      </ul>
+          categories.map(category =>( 
+            <tr key={String(category.id)}>
+              <td>{category.title}</td>
+              <td>
+                <Link href={`/catalog/categories/${String(category.id)}`}>
+                  <a>Detalhes</a>
+                </Link>
+              </td>
+            </tr>
+            ))}
+        </tbody>
+      </Table>
       </>
     )
 

@@ -20,8 +20,8 @@ export default function SEO ({
   return (
     <Head>
       <title>{pageTitle}</title>
-      {!!description && (<meta name="description" content={`${String(description)}`} />)}
-      {!!image && (<meta name="image" content={`${pageImage}`} />)}
+      {!!description && <meta name="description" content={`${String(description)}`} />}
+      {!!image && <meta name="image" content={`${String(pageImage)}`} />}
       {!shouldIndexPage && <meta name='robots' content='noindex,nofollow' />}
     </Head>
   )
