@@ -5,7 +5,8 @@
     { "id": "bone", "title": "Bonés" },
     { "id": "meias", "title": "Meias" },
     { "id": "tenis", "title": "Tênis" },
-    { "id": "luvas", "title": "Luvas" }
+    { "id": "luvas", "title": "Luvas" },
+    { "id": "intima", "title": "Ropas Intimas" }
   ],
   "products": [
     { "id": 1, "title": "Camiseta Front-End", "price": 79.9, "category_id": "camisetas", "slug": "camiseta-front-ends"},
@@ -17,7 +18,9 @@
     { "id": 7, "title": "Tênis NodeJS 0", "price": 199.9, "category_id": "tenis", "slug": "tenis-nodejs0"},
     { "id": 8, "title": "Tênis NodeJS 1", "price": 339.9, "category_id": "tenis", "slug": "tenis-nodejs1"},
     { "id": 9, "title": "Luvas React Native", "price": 20.9, "category_id": "luvas", "slug": "luvas-react-native"},
-    { "id": 10, "title": "Luvas RN", "price": 20.9, "category_id": "luvas", "slug": "luvas-rn"}
+    { "id": 10, "title": "Luvas RN", "price": 20.9, "category_id": "luvas", "slug": "luvas-rn"},
+    { "id": 11, "title": "Cueca BOX", "price": 15.9, "category_id": "intima", "slug": "cueca-box"},
+    { "id": 12, "title": "Calcinha Fio 01", "price": 25.9, "category_id": "intima", "slug": "calcinha-fio-01"}
   ],
   "recommended": [
     { "id": 1, "title": "Camiseta FrontEnd", "price": 79.9, "category_id": "camisetas", "slug": "camiseta-front-ends"},

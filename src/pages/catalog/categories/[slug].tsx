@@ -1,7 +1,7 @@
 
 import { GetStaticPaths, GetStaticProps } from 'next';
 import {useRouter} from 'next/router'
-
+import Menu from '@/components/menu'
 interface IProduct {
   id: String;
   title: String;
@@ -28,6 +28,7 @@ export default function category({products}:IProducts){
 
   return (
   <>
+    <Menu />
     <div>
       <h1>{router.query.slug}</h1>
     </div>

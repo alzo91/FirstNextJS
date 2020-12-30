@@ -1,18 +1,28 @@
 import Link from "next/link";
 import { Navbar, Nav, } from 'react-bootstrap'
+import { MyLink } from '@/components/MyLink'
+
 export default function Menu(){
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Navbar.Brand href="/">Home</Navbar.Brand>
+      <Navbar.Brand >
+        <Link href="/">
+          <MyLink>Home</MyLink>
+        </Link>
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-      <Nav className="mr-auto">
-         <Nav.Link href={`/catalog/categories`}>
-         Categorias
-        </Nav.Link>
-        <Nav.Link href={`/catalog/products`}>
-         Produtos
-        </Nav.Link>
+      <Nav className="mr-auto" style={{justifyContent:'center'}} >
+         
+          <Link  href={`/catalog/categories`}>
+            <MyLink>Categorias</MyLink>
+          </Link>
+        
+        
+          <Link  href={`/catalog/products`}>
+            <MyLink>Produtos</MyLink>
+          </Link>
+        
       </Nav>
       </Navbar.Collapse>
     </Navbar>

@@ -3,6 +3,7 @@ import SEO from '@/components/seo'
 import Menu from '@/components/menu';
 import Link from "next/link";
 import Table from 'react-bootstrap/Table'
+import { MyLink } from "@/components/MyLink";
 interface ICategory {
   id: String,
   title:String,
@@ -38,7 +39,7 @@ export default function Categories({categories}:ICategories){
               <td>{category.title}</td>
               <td>
                 <Link href={`/catalog/categories/${String(category.id)}`}>
-                  <a>Detalhes</a>
+                  <MyLink noPadding={true}>Detalhes</MyLink>
                 </Link>
               </td>
             </tr>

@@ -1,6 +1,9 @@
 import { GetStaticProps } from "next";
+import Link from "next/link";
 import SEO from '@/components/seo'
 import Menu from '@/components/menu';
+import { MyLink } from '@/components/MyLink'
+
 interface IProduct {
   id: String;
   title: String;
@@ -31,7 +34,9 @@ export default function Products({ products }: IProducts) {
           <li key={String(product.id)}>
             <p>{product.title}</p>
             <span>{product.price}</span>
-            <a href={`products/${product.slug}`}>Detalhes</a>
+            <Link href={`products/${product.slug}`}>
+              <MyLink>Detalhes</MyLink>
+            </Link>
           </li>
         ))}
       </ul>

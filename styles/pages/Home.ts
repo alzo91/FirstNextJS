@@ -24,15 +24,7 @@ export const Container = styled.div`
       background-color: #222229;
       border-radius: 25px;
       box-shadow: 5px 5px 3px #008080;
-      a{
-        text-decoration: none;
-        color: #fff;
-        padding: 3px;
-        height: 48px;
-        &:hover {
-          opacity: 0.5;
-        }
-      }
+
     }
   }
 `

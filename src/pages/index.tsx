@@ -3,7 +3,7 @@ import Link from 'next/link'
 import SEO from '@/components/seo';
 import Menu from '@/components/menu';
 import {Title,Container} from '../../styles/pages/Home'
-
+import { MyLink } from '@/components/MyLink'
 interface IProduct {
   id: String,
   title: string,
@@ -15,6 +15,7 @@ interface IProduct {
 interface HomeProps {
   recommendedProducts: IProduct[]
 }
+
 
 export default function Home({recommendedProducts}:HomeProps) {
   // const [recommendedItens, setRecommendedItens]=useState<IProduct[]>([])
@@ -45,11 +46,11 @@ export default function Home({recommendedProducts}:HomeProps) {
               key={String(item.id)} 
               className="box-border">
               <Link href={`/catalog/products/${item.slug}`}>
-                <a>{item.title}</a>
+                <MyLink>{item.title}</MyLink>
               </Link>
               
               <Link href={`/catalog/categories/${item.category_id}`}>
-                <a>Categoria: {item.category_id}</a>
+                <MyLink>Categoria: {item.category_id}</MyLink>
               </Link>
               </li>
             )
