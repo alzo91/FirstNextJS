@@ -40,6 +40,12 @@ export default function Home({recommendedProducts}:HomeProps) {
       <Container>
         
         <Title>Produtos Recomendados</Title>
+        <Link href='/Dashboard'>
+          <a>Dashboard</a>
+        </Link>
+        <Link href='/Login'>
+          <a>Login</a>
+        </Link>
         <ul>
           {recommendedProducts.map( item => 
             (<li 

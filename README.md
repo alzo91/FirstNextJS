@@ -12,6 +12,9 @@ yarn dev
 ## Rodando o Servido da API
 npx json-server .\server.json -p 3333 -
 
+### Rodando o Servidor com delay
+npx json-server .\server.json -p 3333 -w -d 2000
+
 ## Compilando e Gerando a build
 yarn build
 
