@@ -9,7 +9,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-
+  div.divLinks{
+    a{
+      margin-left: 14px;
+    }
+  }
   ul{
     background-color: #2F2F30;
     border-radius: 6px;
